@@ -1,0 +1,31 @@
+function doPost(e) {
+  try {
+    var folderId = "1rEnGBvn5TcO71RPrOCd01gvg0pqOPC4v"; // folder Drive untuk simpan foto
+    var folder = DriveApp.getFolderById(folderId);
+    var blob = e.parameter.fotoBlob ? Utilities.newBlob(Utilities.base64Decode(e.parameter.fotoBlob), e.parameter.fotoType, e.parameter.fotoName) : null;
+    
+    var fotoUrl = "";
+    if(blob){
+      var file = folder.createFile(blob);
+      file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+      fotoUrl = file.getUrl();
+    }
+    
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = ss.getSheetByName("Sheet1");
+    sheet.appendRow([
+      e.parameter.nama,
+      e.parameter.npp,
+      e.parameter.cou,
+      fotoUrl,
+      new Date()
+    ]);
+    
+    return ContentService.createTextOutput(JSON.stringify({status: "success"}))
+      .setMimeType(ContentService.MimeType.JSON);
+    
+  } catch(err) {
+    return ContentService.createTextOutput(JSON.stringify({status: "error", message: err}))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
