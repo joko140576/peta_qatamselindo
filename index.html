@@ -8,7 +8,7 @@
 
 <!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 body {
     margin: 0;
@@ -19,9 +19,22 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('peta.png') no-repeat center center;
+    background: url('peta.png.png') no-repeat center center;
     background-size: auto;
+    margin-top: -20px;
 }
+
+/* Judul */
+.ramadhan-title {
+    font-family: 'Amiri', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #facc15; /* gold */
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+    margin-bottom: 10px; /* lebih rapat */
+    letter-spacing: 1px;
+}
+
 
 /* Titik kota */
 .city {
@@ -54,7 +67,7 @@ body {
 <body>
 
 <div class="container-fluid p-0 mt-2 text-center">
-  <h1>  Qataman Quran Selindo </h1>
+ <h1 class="ramadhan-title">🌙 Khataman Quran Selindo ✨</h1>
     <div class="map-container">
 
         <!-- ==================== TITIK KOTA/PROVINSI ==================== -->
@@ -88,17 +101,20 @@ body {
     <div class="city" style="top:70%; left:23%;" data-bs-toggle="modal" data-bs-target="#modalBandung"></div>
     <div class="city-label" style="top:72%; left:22%;">Bandung</div>
 
+    <div class="city" style="top:70%; left:30%;" data-bs-toggle="modal" data-bs-target="#modalBekasi"></div>
+    <div class="city-label" style="top:70%; left:31%;">Bekasi</div>
+
     
     <div class="city" style="top:66%; left:25%;" data-bs-toggle="modal" data-bs-target="#modalJakarta"></div>
-    <div class="city-label" style="top:63%; left:22%;">DKI Jakarta</div>
+    <div class="city-label" style="top:63%; left:22%;">Harmoni/DKB</div>
 
     <div class="city" style="top:67%; left:28%;" data-bs-toggle="modal" data-bs-target="#modalBanten"></div>
-    <div class="city-label" style="top:65%; left:29%;">Banten</div>
+    <div class="city-label" style="top:65%; left:29%;">Tangerang/BSD</div>
 
     <div class="city" style="top:70%; left:26%;" data-bs-toggle="modal" data-bs-target="#modalBogor"></div>
     <div class="city-label" style="top:72%; left:27%;">Bogor</div>
 
-    <div class="city" style="top:72%; left:33%;" data-bs-toggle="modal" data-bs-target="#modalSemarang"></div>
+    <div class="city" style="top:72%; left:34%;" data-bs-toggle="modal" data-bs-target="#modalSemarang"></div>
     <div class="city-label" style="top:68%; left:33%;">Semarang</div>
 
     <div class="city" style="top:75%; left:35%;" data-bs-toggle="modal" data-bs-target="#modalJogyakarta"></div>
@@ -131,16 +147,28 @@ body {
 
 
     <div class="city" style="top:78%; left:40%;" data-bs-toggle="modal" data-bs-target="#modalMadiun"></div>
-    <div class="city-label" style="top:80%; left:39%;">Madiun</div>
+    <div class="city-label" style="top:80%; left:37%;">Madiun</div>
 
-    <div class="city" style="top:79%; left:50%;" data-bs-toggle="modal" data-bs-target="#modalNTB"></div>
-    <div class="city-label" style="top:77%; left:48%;">NTB</div>
+    <div class="city" style="top:78%; left:45%;" data-bs-toggle="modal" data-bs-target="#modalBanyuwangi"></div>
+    <div class="city-label" style="top:80%; left:42%;">Banyuwangi </div>
+
+    <div class="city" style="top:79%; left:50%;" data-bs-toggle="modal" data-bs-target="#modalBima"></div>
+    <div class="city-label" style="top:77%; left:48%;">Bima</div>
+
+
+
 
     <div class="city" style="top:60%; left:59%;" data-bs-toggle="modal" data-bs-target="#modalMakasar"></div>
     <div class="city-label" style="top:62%; left:57%;">Makasar</div>
+
+    <div class="city" style="top:50%; left:57%;" data-bs-toggle="modal" data-bs-target="#modalParepare"></div>
+    <div class="city-label" style="top:53%; left:57%;">Pare Pare</div>
     
     <div class="city" style="top:55%; left:64%;" data-bs-toggle="modal" data-bs-target="#modalKendari"></div>
     <div class="city-label" style="top:53%; left:66%;">Kendari</div>
+
+    <div class="city" style="top:41%; left:58%;" data-bs-toggle="modal" data-bs-target="#modalPalu"></div>
+    <div class="city-label" style="top:43%; left:59%;">Palu</div>
     
   </div>
 </div>
@@ -171,7 +199,8 @@ body {
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 2</p>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 2</p>
         <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
@@ -181,13 +210,14 @@ body {
 <div class="modal fade" id="modalPadang" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
+      <div class="modal-header bg-warning text-white">
         <h5 class="modal-title">COU PADANG </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 3</p>
-        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 3</p>
+        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -197,13 +227,14 @@ body {
 <div class="modal fade" id="modalPekanbaru" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
+      <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">COU PEKANBARU</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 4</p>
-        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 4</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -213,13 +244,14 @@ body {
 <div class="modal fade" id="modalBatam" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
+      <div class="modal-header bg-info text-white">
         <h5 class="modal-title">COU BATAM</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 5</p>
-        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 5</p>
+        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -229,13 +261,14 @@ body {
 <div class="modal fade" id="modalJambi" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
+      <div class="modal-header bg-secondary text-white">
         <h5 class="modal-title">COU JAMBI</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 6</p>
-        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 6</p>
+        <a href="uploadfoto.html" class="btn btn-secondary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -245,13 +278,14 @@ body {
 <div class="modal fade" id="modalPalembang" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-info text-white">
+      <div class="modal-header bg-success text-white">
         <h5 class="modal-title">COU PALEMBANG</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 7</p>
-        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 7</p>
+        <a href="uploadfoto.html" class="btn btn-success w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -261,13 +295,14 @@ body {
 <div class="modal fade" id="modalLampung" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-info text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">COU LAMPUNG</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 8</p>
-        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 8</p>
+        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -277,13 +312,14 @@ body {
 <div class="modal fade" id="modalJakarta" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
+      <div class="modal-header bg-warning text-white">
         <h5 class="modal-title">COU Harmoni & DKB Fatmawati</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 9</p>
-        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 9</p>
+        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -293,13 +329,14 @@ body {
 <div class="modal fade" id="modalBanten" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-white">
+      <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">COU BSD & Tangerang</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 10</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 10</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -309,13 +346,14 @@ body {
 <div class="modal fade" id="modalBandung" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-info text-white">
         <h5 class="modal-title">COU Bandung</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 11</p>
-        <a href="uploadfoto.html" class="btn btn-success w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 11</p>
+        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -325,13 +363,32 @@ body {
 <div class="modal fade" id="modalBogor" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-secondary text-white">
         <h5 class="modal-title">COU Bogor </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 12</p>
-        <a href="uploadfoto.html" class="btn btn-success w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 12</p>
+        <a href="uploadfoto.html" class="btn btn-secondary w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= MODAL BEKASI================= -->
+<div class="modal fade" id="modalBekasi" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">COU BEKASI </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 13</p>
+        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -341,13 +398,14 @@ body {
 <div class="modal fade" id="modalSemarang" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-warning text-white">
         <h5 class="modal-title">COU Semarang </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 13</p>
-        <a href="uploadfoto.html" class="btn btn-success w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 14</p>
+        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -357,13 +415,14 @@ body {
 <div class="modal fade" id="modalJogyakarta" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-danger text-white">
         <h5 class="modal-title">COU DIY Jogyakarta </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 14</p>
-        <a href="uploadfoto.html" class="btn btn-success w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 15</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -373,13 +432,14 @@ body {
 <div class="modal fade" id="modalSurabaya" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-info text-dark">
         <h5 class="modal-title">COU Surabaya</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 15</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 16</p>
+        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -389,13 +449,14 @@ body {
 <div class="modal fade" id="modalMadiun" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-secondary text-white">
         <h5 class="modal-title">COU MADIUN</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 16</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 17</p>
+        <a href="uploadfoto.html" class="btn btn-secondary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -405,29 +466,50 @@ body {
 <div class="modal fade" id="modalPemekasan" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-primary text-dark">
         <h5 class="modal-title">COU PEMEKASAN</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 17</p>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 18</p>
+        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= MODAL BANYUWANGI ================= -->
+<div class="modal fade" id="modalBanyuwangi" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title">COU BANYUWANGI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 19</p>
         <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= MODAL NTB ================= -->
-<div class="modal fade" id="modalNTB" tabindex="-1">
+
+<!-- ================= MODAL NTB BIMA================= -->
+<div class="modal fade" id="modalBima" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
-        <h5 class="modal-title">COU NTB</h5>
+      <div class="modal-header bg-danger text-dark">
+        <h5 class="modal-title">COU BIMA NTB</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 17</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 20</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -439,13 +521,14 @@ body {
 <div class="modal fade" id="modalPontianak" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-info text-dark">
         <h5 class="modal-title">COU Pontianak</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 16</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 21</p>
+        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -456,13 +539,14 @@ body {
 <div class="modal fade" id="modalPalangkaraya" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-secondary text-white">
         <h5 class="modal-title">COU PALANGKARAYA</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 17</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 22</p>
+        <a href="uploadfoto.html" class="btn btn-secondary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -472,33 +556,19 @@ body {
 <div class="modal fade" id="modalBanjarmasin" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-primary text-dark">
         <h5 class="modal-title">COU Banjarmasin</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 18</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 23</p>
+        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= MODAL SAMARINDA  ================= -->
-<div class="modal fade" id="modalSamarinda" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
-        <h5 class="modal-title">COU Samarinda</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 19</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ================= MODAL BALIKPAPAN   ================= -->
 <div class="modal fade" id="modalBalikpapan" tabindex="-1">
@@ -509,24 +579,46 @@ body {
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 20</p>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 24</p>
         <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
 </div>
 
+
+<!-- ================= MODAL SAMARINDA  ================= -->
+<div class="modal fade" id="modalSamarinda" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-dark">
+        <h5 class="modal-title">COU Samarinda</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 25</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- ================= MODAL KALTARA    ================= -->
 <div class="modal fade" id="modalKaltara" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-warning text-dark">
+      <div class="modal-header bg-info text-dark">
         <h5 class="modal-title">COU Kaltara</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 20</p>
-        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 26</p>
+        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
@@ -535,16 +627,68 @@ body {
 
 
 <!-- ================= MODAL MAKASSAR ================= -->
-<div class="modal fade" id="modalMakassar" tabindex="-1">
+<div class="modal fade" id="modalMakasar" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-info text-white">
-        <h5 class="modal-title">Makassar</h5>
+      <div class="modal-header bg-secondary text-white">
+        <h5 class="modal-title">COU Makassar</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Kegiatan: Membaca Al-Qur’an Juz 5</p>
-        <a href="uploadfoto.html" class="btn btn-info w-100">Isi Form Kegiatan</a>
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 27</p>
+        <a href="uploadfoto.html" class="btn btn-secondary w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL PARE PARE ================= -->
+<div class="modal fade" id="modalParepare" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">COU Pare-Pare</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 28</p>
+        <a href="uploadfoto.html" class="btn btn-primary w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL KENDARI ================= -->
+<div class="modal fade" id="modalKendari" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-white">
+        <h5 class="modal-title">COU Kendari</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 29</p>
+        <a href="uploadfoto.html" class="btn btn-warning w-100">Isi Form Kegiatan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL PALU ================= -->
+<div class="modal fade" id="modalPalu" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">COU Palu </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Kegiatan:</h5>
+        <p>Membaca Al-Qur’an Juz 30</p>
+        <a href="uploadfoto.html" class="btn btn-danger w-100">Isi Form Kegiatan</a>
       </div>
     </div>
   </div>
